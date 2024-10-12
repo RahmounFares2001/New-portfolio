@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: Cairo, sans-serif;
+}
+
+body{
+  background-color: black;
+}
+
+@keyframes spin {
+  0% {
+      border-radius: 34% 64% 77% 26% / 73% 54% 45% 19%;
+    }
+  33% {
+      border-radius:  9% 91% 20% 80% / 61% 35% 65% 39%; 
+    }
+  72%{
+      border-radius: 45% 55% 35% 65% / 82% 59% 41% 18% 
+  }
+  100% {
+      border-radius: 34% 64% 77% 26% / 73% 54% 45% 19%;
+    }
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 40vw solid transparent;
+  border-bottom: 100vh solid black;
+}
