@@ -106,7 +106,6 @@ export default function SideBar() {
               onMouseLeave={()=> {setHoveredButton(0)}}
               key={index} >
 
-          {hoveredButton == item.id && <h1 className='pl-3 text-white text-xl' >{item.name}</h1> }
           {item.icon}
         </Link>
       ))}
