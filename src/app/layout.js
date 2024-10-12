@@ -4,7 +4,7 @@ import "./globals.css";
 // components
 
 // redux providers
-import { Providers } from "@/globalRedux/providers";
+import { Providers } from "../globalRedux/Providers";
 
 
 import SideBar from "./components/SideBar";
