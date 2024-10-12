@@ -101,7 +101,8 @@ export default function SideBar() {
         <Link href={item.path}
             className={`px-2 sm:px-3 py-2 sm:py-3 flex items-center gap-5 w-max rounded-full
               ${hoveredButton == item.id ? "justify-between bg-indigo-600" :
-                   "justify-center bg-gray-950"}`}
+                   "justify-center bg-gray-950"}
+                  ${pathname == item.path ? "bg-indigo-600" : ""} `}
               onMouseEnter={()=> {setHoveredButton(item.id)}}
               onMouseLeave={()=> {setHoveredButton(0)}}
               key={index} >

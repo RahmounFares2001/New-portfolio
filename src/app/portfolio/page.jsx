@@ -78,7 +78,7 @@ export default function page() {
   const [filter, setFilter] = useState('all');
 
   return (
-    <section className='text-white flex flex-col items-center gap-20 py-24' >
+    <section className='text-white flex flex-col items-center gap-20 pb-40 pt-24' >
         <h1 className='text-4xl sm:text-5xl font-bold' >MY <span className='text-indigo-600'>PORTFOLIO</span></h1>
 
         {/* filter */}

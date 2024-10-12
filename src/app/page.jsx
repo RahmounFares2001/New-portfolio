@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <section className="w-full h-full lg:h-[100vh] flex justify-center items-center" >
       <div className="flex gap-7 sm:gap-10 md:gap-16 w-full lg:w-10/12 
-        py-20 lg:py-0 px-8 lg:px-0
+        pb-40 pt-20 lg:py-0 px-8 lg:px-0
         flex-col lg:flex-row justify-center items-center" >
 
         <Image src='/me.jpg' width={800} height={800} alt="IMAGE"
