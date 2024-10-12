@@ -5,6 +5,8 @@ import "./globals.css";
 
 // redux providers
 import { Providers } from "@/globalRedux/providers";
+
+
 import SideBar from "./components/SideBar";
 
 
