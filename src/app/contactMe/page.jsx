@@ -44,7 +44,7 @@ export default function page() {
 
             {/* contact form */}
             <>
-                {/* <ContactForm /> */}
+                <ContactForm />
             </>
         </div>
     </section>
