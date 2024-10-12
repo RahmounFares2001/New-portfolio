@@ -53,7 +53,8 @@ export default function page() {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
           px-10 lg:px-24 gap-10 md:gap-5' >
           {list.map((item, index) => (
-            <div className='col-span-1 rounded-lg cursor-pointer' >
+            <div className='col-span-1 rounded-lg cursor-pointer'
+                key={index} >
               <Image src={item.src} width={800} height={800} alt='Project'
                   className='w-full h-full rounded-lg border border-indigo-800' />
             </div>
