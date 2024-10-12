@@ -11,6 +11,8 @@ import { MdPerson } from "react-icons/md";
 import { PiStudentBold } from "react-icons/pi";
 import { FaImage } from "react-icons/fa6";
 import { FaTelegramPlane } from "react-icons/fa";
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 
 export default function SideBar() {
@@ -19,35 +21,44 @@ export default function SideBar() {
       id: 1,
       name: 'HOME',
       icon:  <AiFillHome className='text-3xl text-white' />,
-      isExpended: false
+      isExpended: false,
+      path: '/'
     },{
       id: 2,
       name: 'ABOUT',
       icon:  <MdPerson className='text-3xl text-white' />,
-      isExpended: false
+      isExpended: false,
+      path: '/aboutMe'
     },
     {
       id: 3,
       name: 'SKILLS',
       icon:  <PiStudentBold className='text-3xl text-white' />,
-      isExpended: false
+      isExpended: false,
+      path: '/skills'
     },
     {
       id: 4,
       name: 'PORTFOLIO',
       icon:  <FaImage className='text-3xl text-white' />,
-      isExpended: false
+      isExpended: false,
+      path: '/portfolio'
     },
     {
       id: 5,
       name: 'CONTACT',
       icon:  <FaTelegramPlane className='text-3xl text-white' />,
-      isExpended: false
+      isExpended: false,
+      path: '/contactMe'
     }
   ]
 
   const [hoveredButton, setHoveredButton] = useState(0);
 
+
+  // pathname
+  const pathname = usePathname();
+  
 
   return (
     <>
@@ -59,16 +70,19 @@ export default function SideBar() {
       </button>
 
       {list.map((item, index) => (
-        <button className={`px-3 py-3 flex items-center gap-5 w-max rounded-full
+        <Link href={item.path}
+            className={`px-3 py-3 flex items-center gap-5 w-max rounded-full
               ${hoveredButton == item.id ? "justify-between bg-indigo-600" :
-                   "justify-center bg-gray-950"}`}
+                   "justify-center bg-gray-950"}
+              ${pathname == item.path ? "bg-indigo-600" : ""}`}
               onMouseEnter={()=> {setHoveredButton(item.id)}}
               onMouseLeave={()=> {setHoveredButton(0)}}
               key={index} >
+                
 
           {hoveredButton == item.id && <h1 className='pl-3 text-white text-xl' >{item.name}</h1> }
           {item.icon}
-        </button>
+        </Link>
       ))}
     </div>
 
@@ -84,7 +98,8 @@ export default function SideBar() {
         flex gap-6 sm:gap-8 justify-center items-center' >
 
       {list.map((item, index) => (
-        <button className={`px-2 sm:px-3 py-2 sm:py-3 flex items-center gap-5 w-max rounded-full
+        <Link href={item.path}
+            className={`px-2 sm:px-3 py-2 sm:py-3 flex items-center gap-5 w-max rounded-full
               ${hoveredButton == item.id ? "justify-between bg-indigo-600" :
                    "justify-center bg-gray-950"}`}
               onMouseEnter={()=> {setHoveredButton(item.id)}}
@@ -93,7 +108,7 @@ export default function SideBar() {
 
           {hoveredButton == item.id && <h1 className='pl-3 text-white text-xl' >{item.name}</h1> }
           {item.icon}
-        </button>
+        </Link>
       ))}
 
     </div>
