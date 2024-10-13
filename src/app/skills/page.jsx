@@ -1,12 +1,29 @@
+"use client";
+
 import React from 'react'
+
+import { motion } from 'framer-motion';
 
 export default function page() {
   return (
-    <section className='text-white flex flex-col items-center gap-20 pb-40 pt-24' >
-        <h1 className='text-4xl sm:text-5xl font-bold' >MY <span className='text-indigo-600'>SKILLS</span></h1>
+    <motion.section className='overflow-x-hidden w-full h-[100vh] text-white flex flex-col items-center gap-20 pb-40 pt-24 bg-black'
+                  initial= {{y: '-100vh'}}
+                  animate= {{y: 0}}
+                  transition={{ duration: 0.5, delay: 0, stiffness: 50 }} >
 
+      <motion.h1 className='text-4xl sm:text-5xl font-bold'
+            initial= {{y: '-20vw', opacity: '0'}}
+            animate= {{y: 0, opacity: '1'}}
+            transition={{ duration: 0.5, delay: 0.3, stiffness: 50 }} >
 
-        <div className='w-full flex flex-col items-center gap-8' >
+            MY <span className='text-indigo-600'>SKILLS</span>
+            
+      </motion.h1>
+
+        <motion.div className='w-full flex flex-col items-center gap-8'
+            initial= {{x: '-40vw', opacity: '0', type: ""}}
+            animate= {{x: 0, opacity: '1'}}
+            transition={{ duration: 0.5, delay: 0.3, stiffness: 50, type: 'spring' }} >
 
           <h1 className='w-11/12 sm:w-5/6 md:w-4/5 text-2xl text-white font-bold text-start' >TECH STACK</h1>
 
@@ -54,8 +71,8 @@ export default function page() {
 
           </div>
 
-        </div>
+        </motion.div>
 
-    </section>
+    </motion.section>
   )
 }

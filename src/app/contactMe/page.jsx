@@ -1,4 +1,9 @@
+"use client";
+
 import React from 'react'
+
+// motion
+import { motion } from 'framer-motion';
 
 // icons
 import { FaSignature } from "react-icons/fa6";
@@ -8,14 +13,28 @@ import ContactForm from '../components/contactMe/ContactForm';
 
 export default function page() {
   return (
-    <section className='text-white flex flex-col items-center gap-20 pb-32 pt-24' >
+    <>
+    <motion.section className='overflow-x-hidden w-full h-[100vh] text-white flex flex-col items-center gap-20 pb-32 pt-24 bg-black'
+        initial= {{y: '-100vh'}}
+        animate= {{y: 0}}
+        transition={{ duration: 0.5, delay: 0, stiffness: 50 }} >
         
-        <h1 className='text-4xl sm:text-5xl font-bold' >GET IN <span className='text-indigo-600'>TOUCH</span></h1>
+        <motion.h1 className='text-4xl sm:text-5xl font-bold'
+            initial= {{y: '-20vw', opacity: '0'}}
+            animate= {{y: 0, opacity: '1'}}
+            transition={{ duration: 0.5, delay: 0.3, stiffness: 50 }} >
 
-        <div className='flex flex-col lg:flex-row px-10 sm:px-24 gap-10
+            GET IN <span className='text-indigo-600'>TOUCH</span>
+
+        </motion.h1>
+
+        <div className='flex flex-col lg:flex-row px-4 sm:px-24 gap-10
             items-center lg:items-start' >
 
-            <div className='flex items-center lg:items-start w-full lg:w-2/6' >
+            <motion.div className='flex items-center lg:items-start w-full lg:w-2/6'
+                initial= {{x: '-40vw', opacity: '0', type: ""}}
+                animate= {{x: 0, opacity: '1'}}
+                transition={{ duration: 0.5, delay: 0.3, stiffness: 50, type: 'spring' }} >
                 <div className='w-full flex items-center lg:items-start flex-col gap-7' >
                     <h1 className='text-2xl font-bold' >DONT'T BE <span className='text-indigo-600'>SHY !</span></h1>
 
@@ -39,7 +58,7 @@ export default function page() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
 
             {/* contact form */}
@@ -47,6 +66,7 @@ export default function page() {
                 <ContactForm />
             </>
         </div>
-    </section>
+    </motion.section>
+    </>
   )
 }

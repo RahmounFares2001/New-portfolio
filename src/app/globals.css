@@ -6,8 +6,13 @@
   font-family: Cairo, sans-serif;
 }
 
+html{
+  scrollbar-width: thin;
+  scrollbar-color: #002794 #000000;
+}
+
 body{
-  background-color: black;
+  background-color: rgb(7, 7, 7);
   overflow-x: hidden;
 }
 

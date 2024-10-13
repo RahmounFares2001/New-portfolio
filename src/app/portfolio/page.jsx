@@ -5,6 +5,9 @@ import Link from 'next/link';
 import React, { useState } from 'react'
 
 
+import { delay, motion } from 'framer-motion';
+
+
 // icons
 import { FaLink } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
@@ -77,37 +80,69 @@ export default function page() {
   // filter 
   const [filter, setFilter] = useState('all');
 
+
+
   return (
-    <section className='text-white flex flex-col items-center gap-20 pb-40 pt-24' >
-        <h1 className='text-4xl sm:text-5xl font-bold' >MY <span className='text-indigo-600'>PORTFOLIO</span></h1>
+    <motion.section className='overflow-x-hidden w-full h-[100vh] text-white flex flex-col items-center gap-20 pb-40 pt-24 bg-black'
+          initial= {{y: '-100vh'}}
+          animate= {{y: 0}}
+          transition={{ duration: 0.5, delay: 0, stiffness: 50 }} >
+
+        <motion.h1 className='text-4xl sm:text-5xl font-bold'
+            initial= {{y: '-20vw', opacity: '0'}}
+            animate= {{y: 0, opacity: '1'}}
+            transition={{ duration: 0.5, delay: 0.3, stiffness: 50 }} >
+
+            My <span className='text-indigo-600'>PORTFOLIO</span>
+            
+        </motion.h1>
 
         {/* filter */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-8 md:gap-10' >
-          <button className={`text-xl sm:text-2xl w-40 py-2 hover:bg-indigo-800 
+        <motion.div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-8 md:gap-10' >
+          <motion.button className={`text-xl sm:text-2xl w-40 py-2 hover:bg-indigo-800 
               ${filter == 'all' && 'bg-indigo-800'} rounded-md`}
-                  onClick={()=> {setFilter('all')}} >All</button>
+                  onClick={()=> {setFilter('all')}}
+                  initial= {{x: '-40vw', opacity: '0', type: ""}}
+                  animate= {{x: 0, opacity: '1'}}
+                  transition={{ duration: 0.5, delay: 0.3, stiffness: 50, type: 'spring' }} >All
+          </motion.button>
 
-          <button className={`text-xl sm:text-2xl w-40 py-2 hover:bg-indigo-800
+          <motion.button className={`text-xl sm:text-2xl w-40 py-2 hover:bg-indigo-800
               ${filter == 'fullstack' && 'bg-indigo-800'} rounded-md`}
-                  onClick={()=> {setFilter('fullstack')}} >Full Stack</button>
+                  onClick={()=> {setFilter('fullstack')}}
+                  initial= {{x: '-40vw', opacity: '0', type: ""}}
+                  animate= {{x: 0, opacity: '1'}}
+                  transition={{ duration: 0.5, delay: 0.4, stiffness: 50, type: 'spring' }}>Full Stack
+          </motion.button>
 
-          <button className={`text-xl sm:text-2xl w-40 py-2 hover:bg-indigo-800
+          <motion.button className={`text-xl sm:text-2xl w-40 py-2 hover:bg-indigo-800
               ${filter == 'backend' && 'bg-indigo-800'} rounded-md`}
-                  onClick={()=> {setFilter('backend')}} >Backend</button>
+                  onClick={()=> {setFilter('backend')}}
+                  initial= {{x: '-40vw', opacity: '0', type: ""}}
+                  animate= {{x: 0, opacity: '1'}}
+                  transition={{ duration: 0.5, delay: 0.6, stiffness: 50, type: 'spring' }} >Backend
+          </motion.button>
 
-          <button className={`text-xl sm:text-2xl w-40 py-2 hover:bg-indigo-800
+          <motion.button className={`text-xl sm:text-2xl w-40 py-2 hover:bg-indigo-800
               ${filter == 'frontend' && 'bg-indigo-800'} rounded-md`}
-                  onClick={()=> {setFilter('frontend')}} >Frontend</button>
-        </div>
+                  onClick={()=> {setFilter('frontend')}}
+                  initial= {{x: '-40vw', opacity: '0', type: ""}}
+                  animate= {{x: 0, opacity: '1'}}
+                  transition={{ duration: 0.5, delay: 0.8, stiffness: 50, type: 'spring' }} >Frontend
+          </motion.button>
+        </motion.div>
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
           px-10 lg:px-24 gap-10 md:gap-5' >
 
           {lists.filter(list => (filter === 'all' || list.category === filter)).map((item, index) => (
-            <div className='col-span-1 rounded-lg cursor-pointer relative'
+            <motion.div className='col-span-1 rounded-lg cursor-pointer relative'
                 key={index}
                 onMouseEnter={()=> {setItemHovered(item.id)}}
-                onMouseLeave={()=> {setItemHovered(0)}} >
+                onMouseLeave={()=> {setItemHovered(0)}}
+                initial= {{y: '40vh', opacity: '0', type: ""}}
+                animate= {{y: 0, opacity: '1'}}
+                transition={{ duration: 0.5, delay: 0.4, stiffness: 50, type: 'spring' }} >
               <Image src={item.src} width={800} height={800} alt='Project'
                   className='w-full h-full rounded-lg border border-indigo-800' />
               
@@ -124,9 +159,9 @@ export default function page() {
                   </Link>
                 </div>  }
                 
-            </div>
+            </motion.div>
           ))}
         </div>
-    </section>
+    </motion.section>
   )
 }
