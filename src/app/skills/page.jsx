@@ -25,10 +25,11 @@ export default function page() {
             animate= {{x: 0, opacity: '1'}}
             transition={{ duration: 0.5, delay: 0.3, stiffness: 50, type: 'spring' }} >
 
-          <h1 className='w-11/12 sm:w-5/6 md:w-4/5 text-2xl text-white font-bold text-start' >TECH STACK</h1>
 
           <div className='grid sm:grid-cols-2 w-11/12 sm:w-5/6 md:w-4/5 text-sm gap-6
                 justify-center sm:justify-normal' >
+            <h1 className='col-span-2 w-11/12 sm:w-5/6 md:w-4/5 text-2xl text-white font-bold text-start' >TECH STACK</h1>
+
             <h1 className='text-gray-500 col-span-1' >Front-End : 
                   <span className='text-white font-bold' > HTML5, CSS3, JavaScript (React.js, Next.js)</span>
             </h1>

@@ -38,7 +38,7 @@ export default function page() {
                 <div className='w-full flex items-center lg:items-start flex-col gap-7' >
                     <h1 className='text-2xl font-bold' >DONT'T BE <span className='text-indigo-600'>SHY !</span></h1>
 
-                    <p className='' >Feel Free To Send me A Message Or Reach Out To me Whenever You Need Assistance. Your Satisfaction Is myTop Priority</p>
+                    <p className='text-center md:text-start' >Feel Free To Send me A Message Or Reach Out To me Whenever You Need Assistance. Your Satisfaction Is myTop Priority</p>
 
                     <div className='flex flex-col justify-start gap-5' >
                         <div className='flex gap-5 lg:gap-3 items-center' >
