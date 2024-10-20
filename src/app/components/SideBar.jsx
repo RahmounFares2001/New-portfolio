@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react'
 
+// motion
+import { motion } from 'framer-motion';
 
 // icons
 import { IoMoon } from "react-icons/io5";
@@ -71,16 +73,24 @@ export default function SideBar() {
 
       {list.map((item, index) => (
         <Link href={item.path}
-            className={`px-3 py-3 flex items-center gap-5 w-max rounded-full
-              ${hoveredButton == item.id ? "justify-between bg-indigo-600" :
-                   "justify-center bg-gray-950"}
+            className={`px-3 py-3 flex items-center gap-5 w-ma rounded-full 
+                transition-all duration-500 ease-in-out
+              ${hoveredButton == item.id ? "justify-between bg-indigo-600 w-[250px]" :
+                   "justify-center bg-gray-950 w-[50px]"}
               ${pathname == item.path ? "bg-indigo-600" : ""}`}
               onMouseEnter={()=> {setHoveredButton(item.id)}}
               onMouseLeave={()=> {setHoveredButton(0)}}
-              key={index} >
-                
+              key={index} > 
 
-          {hoveredButton == item.id && <h1 className='pl-3 text-white text-xl' >{item.name}</h1> }
+          {hoveredButton == item.id && 
+              <motion.h1 className='pl-3 text-white text-xl tracking-widest'
+                  initial= {{ opacity: '0'}}
+                  animate= {{ opacity: '1'}}
+                  transition={{ duration: 0.5, delay: 0.4, stiffness: 50 }} >
+                {item.name}
+              </motion.h1> 
+          }
+
           {item.icon}
         </Link>
       ))}

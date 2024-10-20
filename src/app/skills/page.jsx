@@ -30,43 +30,43 @@ export default function page() {
                 justify-center sm:justify-normal' >
             <h1 className='col-span-2 w-11/12 sm:w-5/6 md:w-4/5 text-2xl text-white font-bold text-start' >TECH STACK</h1>
 
-            <h1 className='text-gray-500 col-span-1' >Front-End : 
+            <h1 className='text-gray-500 col-span-2 sm:col-span-1' >Front-End : 
                   <span className='text-white font-bold' > HTML5, CSS3, JavaScript (React.js, Next.js)</span>
             </h1>
 
-            <h1 className='text-gray-500 col-span-1' >Back-End : 
+            <h1 className='text-gray-500 col-span-2 sm:col-span-1' >Back-End : 
                   <span className='text-white font-bold' > Golang(Gin), Node.js</span>
             </h1>
 
-            <h1 className='text-gray-500 col-span-1' >DBMS : 
+            <h1 className='text-gray-500 col-span-2 sm:col-span-1' >DBMS : 
                   <span className='text-white font-bold' > PostgreSQL, OracleDB, MongoDB</span>
             </h1>
 
-            <h1 className='text-gray-500 col-span-1' >Mobile App Development : 
+            <h1 className='text-gray-500 col-span-2 sm:col-span-1' >Mobile App Development : 
                   <span className='text-white font-bold' > React Native</span>
             </h1>
 
-            <h1 className='text-gray-500 col-span-1' >CSS Frameworks : 
+            <h1 className='text-gray-500 col-span-2 sm:col-span-1' >CSS Frameworks : 
                   <span className='text-white font-bold' > Tailwind CSS, Material-UI (MUI)</span>
             </h1>
 
-            <h1 className='text-gray-500 col-span-1' >CI/CD : 
+            <h1 className='text-gray-500 col-span-2 sm:col-span-1' >CI/CD : 
                   <span className='text-white font-bold' > Jenkins</span>
             </h1>
 
-            <h1 className='text-gray-500 col-span-1' >Containerization : 
+            <h1 className='text-gray-500 col-span-2 sm:col-span-1' >Containerization : 
                   <span className='text-white font-bold' > Docker, Kubernetes</span>
             </h1>
 
-            <h1 className='text-gray-500 col-span-1' >Cloud Services : 
+            <h1 className='text-gray-500 col-span-2 sm:col-span-1' >Cloud Services : 
                   <span className='text-white font-bold' > AWS</span>
             </h1>
 
-            <h1 className='text-gray-500 col-span-1' >Scripts : 
+            <h1 className='text-gray-500 col-span-2 sm:col-span-1' >Scripts : 
                   <span className='text-white font-bold' > Bash</span>
             </h1>
 
-            <h1 className='text-gray-500 col-span-1' >Version Control : 
+            <h1 className='text-gray-500 col-span-2 sm:col-span-1' >Version Control : 
                   <span className='text-white font-bold' > Git, Github</span>
             </h1>
 

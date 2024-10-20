@@ -147,8 +147,12 @@ export default function page() {
                   className='w-full h-full rounded-lg border border-indigo-800' />
               
               {itemHovered == item.id &&
-                <div className='absolute top-0 right-0 w-full h-[100%] bg-indigo-600 
-                    rounded-lg flex justify-center items-center' >
+                <motion.div className='absolute top-0 right-0 w-full h-[100%] bg-indigo-600 
+                    rounded-lg flex justify-center items-center'
+                    initial= {{opacity: 0}}
+                    animate= {{opacity: 1}}
+                    transition={{ duration: 0.3, delay: 0, stiffness: 50 }} >
+
                   <h1 className='text-white text-2xl' >{item.name}</h1>
                   <Link href={item.link} target='_blank' >
                     <FaLink className='absolute text-2xl bottom-3 right-3' />
@@ -157,7 +161,8 @@ export default function page() {
                   <Link href={item.github} target='_blank' >
                     <FaGithub className='absolute text-2xl bottom-3 left-3' />
                   </Link>
-                </div>  }
+
+                </motion.div>  }
                 
             </motion.div>
           ))}
