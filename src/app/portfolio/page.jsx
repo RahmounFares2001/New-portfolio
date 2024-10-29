@@ -43,7 +43,7 @@ export default function page() {
     {
       id: 4,
       name: "Simple Bank Backend",
-      src: "/portfolio/carRental.png",
+      src: "/portfolio/bankBackend.png",
       link: "#",
       github: "https://github.com/RahmounFares2001/simple-bank-backend",
       category: "backend"
@@ -67,7 +67,7 @@ export default function page() {
     {
       id: 7,
       name: "Elstar",
-      src: "/portfolio/ecommerce.png",
+      src: "/portfolio/elstar.png",
       link: "#",
       github: "https://github.com/RahmounFares2001",
       category: "frontend"
@@ -98,7 +98,7 @@ export default function page() {
         </motion.h1>
 
         {/* filter */}
-        <motion.div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-8 md:gap-10' >
+        <motion.div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-8 md:gap-10' >
           <motion.button className={`text-xl sm:text-2xl w-40 py-2 hover:bg-indigo-800 
               ${filter == 'all' && 'bg-indigo-800'} rounded-md`}
                   onClick={()=> {setFilter('all')}}
@@ -107,7 +107,7 @@ export default function page() {
                   transition={{ duration: 0.5, delay: 0.3, stiffness: 50, type: 'spring' }} >All
           </motion.button>
 
-          <motion.button className={`text-xl sm:text-2xl w-40 py-2 hover:bg-indigo-800
+          <motion.button className={`text-xl sm:text-2xl w-40 py-2 hover:bg-indigo-800 
               ${filter == 'fullstack' && 'bg-indigo-800'} rounded-md`}
                   onClick={()=> {setFilter('fullstack')}}
                   initial= {{x: '-40vw', opacity: '0', type: ""}}
