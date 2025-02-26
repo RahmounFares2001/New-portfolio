@@ -31,11 +31,11 @@ export default function page() {
             <h1 className='col-span-2 w-11/12 sm:w-5/6 md:w-4/5 lg:w-3/5 text-2xl text-white font-bold text-start' >PERSONAL INFO</h1>
 
             <h1 className='text-gray-500 col-span-2 sm:col-span-1' >First Name :
-                  <span className='text-white font-bold' > Fares</span>
+                  <span className='text-white font-bold' > Fares Abdalhamid</span>
             </h1>
 
             <h1 className='text-gray-500 col-span-2 sm:col-span-1' >Last Name : 
-                  <span className='text-white font-bold' > Fares</span>
+                  <span className='text-white font-bold' > Rahmoun</span>
             </h1>
 
             <h1 className='text-gray-500 col-span-2 sm:col-span-1' >Age : 
@@ -43,7 +43,7 @@ export default function page() {
             </h1>
 
             <h1 className='text-gray-500 col-span-2 sm:col-span-1' >Nationality : 
-                  <span className='text-white font-bold' > Algeirs</span>
+                  <span className='text-white font-bold' > Algeria</span>
             </h1>
 
             <h1 className='text-gray-500 col-span-2 sm:col-span-1' >Freelance : 
@@ -51,7 +51,7 @@ export default function page() {
             </h1>
 
             <h1 className='text-gray-500 col-span-2 sm:col-span-1' >Adress : 
-                  <span className='text-white font-bold' > Algeria</span>
+                  <span className='text-white font-bold' > Algeirs</span>
             </h1>
 
             <h1 className='text-gray-500 col-span-2 sm:col-span-1' >Phone : 
@@ -63,7 +63,8 @@ export default function page() {
             </h1>
 
             <h1 className='text-gray-500 col-span-2 sm:col-span-1' >Linkdin : 
-                  <span className='text-white font-bold' > Fares Rahmoun</span>
+                  <a href='https://www.linkedin.com/in/fares-rahmoun-018674257/' target="_blank" rel="noopener noreferrer"
+                        className='text-white font-bold hover:text-indigo-700 cursor-pointer' > Fares Rahmoun</a>
             </h1>
 
             <h1 className='text-gray-500 col-span-2 sm:col-span-1' >Languages : 

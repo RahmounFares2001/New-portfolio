@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  font-family: Cairo, sans-serif;
-}
-
 html{
   scrollbar-width: thin;
   scrollbar-color: #002794 #000000;

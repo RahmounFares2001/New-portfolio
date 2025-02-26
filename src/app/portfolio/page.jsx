@@ -18,6 +18,14 @@ export default function page() {
   const lists = [
     {
       id: 1,
+      name: "SCM Blockchain",
+      src: "/portfolio/scm-blockchain.png",
+      link: "#",
+      github: "https://github.com/RahmounFares2001",
+      category: "fullstack"
+    },
+    {
+      id: 2,
       name: "Ecommerce",
       src: "/portfolio/ecommerce.png",
       link: "#",
@@ -25,7 +33,7 @@ export default function page() {
       category: "fullstack"
     },
     {
-      id: 2,
+      id: 3,
       name: "Wadjed",
       src: "/portfolio/wadjed.png",
       link: "https://demo.wadjed.com/",
@@ -33,7 +41,15 @@ export default function page() {
       category: "fullstack"
     },
     {
-      id: 3,
+      id: 4,
+      name: "Stock Management",
+      src: "/portfolio/stock.png",
+      link: "#",
+      github: "https://github.com/RahmounFares2001",
+      category: "fullstack"
+    },
+    {
+      id: 5,
       name: "Services Management",
       src: "/portfolio/services.png",
       link: "https://service-management.vercel.app/",
@@ -41,7 +57,7 @@ export default function page() {
       category: "fullstack"
     },
     {
-      id: 4,
+      id: 6,
       name: "Simple Bank Backend",
       src: "/portfolio/bankBackend.png",
       link: "#",
@@ -49,7 +65,7 @@ export default function page() {
       category: "backend"
     },
     {
-      id: 5,
+      id: 7,
       name: "Car Rental",
       src: "/portfolio/carRental.png",
       link: "https://carrental-orcin.vercel.app/",
@@ -57,7 +73,7 @@ export default function page() {
       category: "frontend"
     },
     {
-      id: 6,
+      id: 8,
       name: "IPTV",
       src: "/portfolio/iptv.png",
       link: "#",
@@ -65,8 +81,8 @@ export default function page() {
       category: "frontend"
     },
     {
-      id: 7,
-      name: "Elstar",
+      id: 9,
+      name: "Elstar Clone",
       src: "/portfolio/elstar.png",
       link: "#",
       github: "https://github.com/RahmounFares2001",
@@ -93,7 +109,7 @@ export default function page() {
             animate= {{y: 0, opacity: '1'}}
             transition={{ duration: 0.5, delay: 0.3, stiffness: 50 }} >
 
-            My <span className='text-indigo-600'>PORTFOLIO</span>
+            MY <span className='text-indigo-600'>PORTFOLIO</span>
             
         </motion.h1>
 

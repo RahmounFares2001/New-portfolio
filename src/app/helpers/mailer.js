@@ -24,7 +24,6 @@ export const sendEmail = async ({name, email, subject, message}) => {
         };
 
         const mailResponse = transport.sendMail(mailOptions);
-
         return mailResponse;
         
     } catch (error) {

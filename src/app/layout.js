@@ -1,31 +1,37 @@
-import { Inter } from "next/font/google";
+import { Inter, Roboto_Mono, Poppins } from "next/font/google";
 import "./globals.css";
-
-// components
-
-// redux providers
-import { Providers } from "../globalRedux/Providers";
-
-
+import { Providers } from "@/globalRedux/Providers";
 import SideBar from "./components/SideBar";
 
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
 
+const robotoMono = Roboto_Mono({
+  variable: "--font-roboto-mono",
+  subsets: ["latin"],
+});
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export const metadata = {
   title: "RAHMOUN Fares",
   description: "Portfolio website of Rahmoun Fares, showcasing projects, skills, and expertise in full-stack development.",
   keywords: "Rahmoun Fares, Full-Stack Developer, Portfolio, Web Development, React, Next.js, Golang",
   author: "Rahmoun Fares",
-  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Providers>
-        <body className={inter.className}>
+        <body className={`${inter.variable} ${poppins.variable} ${robotoMono.variable} antialiased
+          bg-black`}>
           {children}
           
           <SideBar />

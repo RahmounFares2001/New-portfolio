@@ -9,10 +9,7 @@ export async function POST(request){
     try {
 
         const reqBody = await request.json();
-        console.log("begin")
         const {name, email, subject, message} = reqBody;
-        console.log("hoo")
-        console.log(name)
 
         // send email
         await sendEmail({name, email, subject, message})
