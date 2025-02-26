@@ -30,8 +30,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Providers>
-        <body className={`${inter.variable} ${poppins.variable} ${robotoMono.variable} antialiased
-          bg-black`}>
+        <body className={`${inter.variable} ${poppins.variable} ${robotoMono.variable} antialiased`}>
           {children}
           
           <SideBar />
