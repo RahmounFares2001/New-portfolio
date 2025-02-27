@@ -69,10 +69,11 @@ export default function Home() {
           <motion.a href="/aboutMe" target="_blank" rel="noopener noreferrer"
                 className="text-sm text-center font-bold rounded-full
                 border border-indigo-600 w-64  
-                flex justify-between items-center hover:bg-indigo-600"
+                flex justify-between items-center hover:bg-indigo-600
+                t transition-colors duration-500 delay-150"
                 initial= {{y: '-100vh'}}
                 animate= {{y: 0}}
-                transition={{ duration: 0.5, delay: 0, stiffness: 50 , type: 'spring' }} 
+                transition={{ duration: 1, delay: 1, stiffness: 50 , type: 'spring' }} 
                > 
             <h1 className="w-4/5" >MORE ABOUT ME</h1>
             <div className="h-full py-7 aspect-square bg-indigo-600
