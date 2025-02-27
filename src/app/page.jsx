@@ -66,7 +66,8 @@ export default function Home() {
               Hi, I'm a Full-Stack Developer with 2 years of experience in building, and maintaining responsive web applications.
           </motion.p>
 
-          <motion.button className="text-sm font-bold rounded-full
+          <motion.a href="/aboutMe" target="_blank" rel="noopener noreferrer"
+                className="text-sm text-center font-bold rounded-full
                 border border-indigo-600 w-64  
                 flex justify-between items-center hover:bg-indigo-600"
                 initial= {{y: '-100vh'}}
@@ -78,7 +79,7 @@ export default function Home() {
                 rounded-full flex justify-center items-center" >
               <FaArrowRight className="text-2xl text-white" />
             </div>
-          </motion.button>
+          </motion.a>
 
         </div>
       </div>

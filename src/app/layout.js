@@ -20,7 +20,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "RAHMOUN Fares",
+  title: "RAHMOUN Fares - Full-Stack Developer Portfolio",
   description: "Portfolio website of Rahmoun Fares, showcasing projects, skills, and expertise in full-stack development.",
   keywords: "Rahmoun Fares, Full-Stack Developer, Portfolio, Web Development, React, Next.js, Golang",
   author: "Rahmoun Fares",
@@ -29,10 +29,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="google-site-verification" content="your-verification-code" />
+      </head>
       <Providers>
         <body className={`${inter.variable} ${poppins.variable} ${robotoMono.variable} antialiased`}>
           {children}
-          
           <SideBar />
         </body>
       </Providers>
